@@ -9,28 +9,35 @@
 <script type="text/javascript" src="fuctionality.js" defer></script>
 </head>
 <style type="text/css">
-/*body style*/
-			body{
-	opacity: ;
+/*.................................................................body style..................................................*/
+* {
+  font-family: 'Poppins', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
   margin-right: 1%;
-	margin-top: 2px;
-	padding-left: 0.5px;
-	padding-right: 0.5px;
-	background: ;
-	width: 100%;
-	height: auto;
+  margin-top: 2px;
+  padding-left: 0.5px;
+  padding-right: 0.5px;
+  width: 100%;
+  height: auto;
   background: #9999;
   background-size: cover;
-
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
-  @media screen and (max-width: 768px padding-left: 1px max-height: 100kvh) {
-    body {
-      transform: scale(0.5); /* Zoom out for smaller screens */
-    }
+
+@media screen and (max-width: 768px) {
+  body {
+    transform: scale(0.5); /* Zoom out for smaller screens */
   }
-  /*logo style*/
+}
+
+  /*......................................................logo style..........................................................*/
 
     .head {
       display: flex;
@@ -190,7 +197,16 @@
  }
 } 
 
-  /*header*/
+
+
+
+
+
+  /*..........................................................header...............................................................*/
+
+
+
+
              @media screen and (max-width: 600px ) {
     header .normal li{
              font-size: 70%;
@@ -241,6 +257,13 @@ header {
    transform: scale(1.0);
 
   }
+
+
+  /*..............................................................marquee.......................................................*/
+
+
+
+
   .user-place{
     width: 100%;
     height: 2vw;
@@ -256,14 +279,20 @@ header {
 
     }
   }
-      .user-place p{
+      .user-place marquee{
      font-size: 95%;
     }
     @media screen and (max-width: 600px){
-    .user-place p{
+    .user-place marquee{
+      margin-top: -1%;
      font-size: 70%;
     }
   }
+
+
+  /*........................................................navigation section...............................................*/
+
+
       .normal{
       display: flex;
       width: 20%;
@@ -280,6 +309,265 @@ header {
       background: #34282C;
       transform: scale(1.0);
     }
+    #admin1{
+      display: none;
+    }
+    @media screen and (max-width: 600px){
+      #admin1{
+        display: none;
+      }
+    }
+    #admin_page{
+      display: none;
+      width: 100%;
+     height: auto;
+    }
+    @media screen and (max-width: 600px){
+      #admin_page{
+        display: none;
+      }
+    }
+    #auth{
+      display: flex;
+      flex-direction: column;
+      background: rgba(255, 255, 255, 0.6);
+      margin: 5vw;
+      width: 50%;
+      margin-left: 30%;
+      height: auto;
+    }
+    #admin{
+      display: none;
+      flex-direction: column;
+    }
+    .admin_header{
+      margin-top: 0.1%;
+      width: 100%;
+      height: 5vw;
+      background: rgba(255, 255, 255, 0.9);
+      display: flex;
+    }
+.cancel{
+        text-align: center;
+        border: 1px solid rgba(0, 0, 0, 0.5);
+        height: 3vw;
+        width: 7vw;
+        margin-left: 70%;
+        border-radius: 12%;
+        margin-top: 1%;
+        cursor: pointer;
+}
+.cancel:hover{
+
+}
+#cancel{
+        margin-top: 10%;
+}
+.save{
+        text-align: center;
+        border: 1px solid rgba(255, 99, 71, 0.7);
+        height: 3vw;
+        width: 6vw;
+        margin-left: 5%;
+        border-radius: 12%;
+        background: rgba(255, 99, 71, 0.8);
+        margin-top: 1%;
+        cursor: pointer;
+}
+
+.save:hover{
+  background: rgba(255, 99, 71, 1);
+  border: 1px solid rgba(255, 99, 71, 1);
+  padding: 1px;
+}
+#save{
+        margin-top: 10%;
+        color: white;
+}
+    .movie-cat{
+      display: flex;
+      flex-direction: row;
+      margin-top: 0.1%;
+      background: rgba(255, 255, 255, 0.6);
+      width: 100%;
+     height: auto;
+    }
+    #cover{
+      margin-left: 5vw;
+      width: 24vw;
+      height: 28vw;
+    }
+    #fileInput{
+      display: none;
+    }
+    .cat{
+      background: rgba(255, 255, 255, 0.9);
+      margin-left: 14vw;
+      width: 55%;
+    }
+    .heading_id{
+      margin-top: 2%;
+      margin-left: 1%;
+      margin: 5%;
+      font-size: 150%;
+      font-weight: 200px;
+    }
+    #title, #date{
+        margin-left: 4%;
+        margin-top: -1%;
+        width: 80%;
+        height: 3.5vw;
+        border: 1px solid rgba(0, 0, 0, 0.4);
+        border-radius: 2%;
+    }
+    .quality-input,.Genre_tab{
+        margin-left: 4%;
+        margin-top: -1%;
+        width: 80%;
+        height: 3.5vw;
+        border: 1px solid rgba(0, 0, 0, 0.5);
+        border-radius: 2%;
+        position: relative;
+        display: flex;
+    }
+    .movie-quality,.movie-genre{
+        display: flex;
+        margin-top: 3vw;
+        display: none;
+    }
+    .sub-sp{
+        justify-content: space-around;
+        white-space: break-spaces;
+        display: flex;
+        flex-wrap: wrap;
+        width: 65%;
+        height: auto;
+        margin: 1%;
+        margin-left: 10%;
+    }
+    .icon{
+        transform: rotate(270deg);
+        margin-left: 90%;
+        font-size: 120%;
+        margin-top: 0.2%;
+        display: inline-block;
+        color: rgba(0, 0, 0, 0.7);
+        transition: 0.5s;
+    }
+    .icon:hover{
+        color: rgba(0, 0, 0, 1);
+        cursor: pointer;
+    }
+.movie-quality_active,.movie-genre_active{
+    display: block;
+    z-index: 1;
+    position: absolute;
+    background: white;
+    margin-top: 5%;
+    margin-left: 15%;
+    width: 40%;
+    height: auto;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    transition: 0.09s;
+    transform: scale(1.0);
+}
+.cls,.qal{
+    cursor: pointer;
+     margin: 5%;
+     border: 1px solid black;
+     border-radius: 5%;
+     padding: 1% 3%;
+}
+.cls:hover{
+    background-color: rgba(255, 121, 121, 0.4);
+}
+.qal:hover{
+    background-color: rgba(255, 121, 121, 0.4);
+}
+.active, .active-qal{
+    background: rgba(255, 121, 121, 0.6);
+}
+#add_movie{
+  margin-left: 20%;
+  width: 18vw;
+  height: 18vw;
+}
+#movieInput{
+  display: none;
+}
+
+#loader{
+    display: none;
+    position: absolute;
+    margin-left: 11.9%;
+    margin-top: -14.9%;
+    border-radius: 50%;
+    width: 5%;
+    height: 7%;
+}
+#loading{
+    margin-left: ;
+    margin-top: ;
+    border: 1vw solid #f3f3f3;
+    border-top: 1vw solid #3498db;
+    border-radius: 50%;
+    width: 9.0vw;
+    height: 9.0vw;
+    animation: spin 2s linear infinite;
+    margin: 0 auto;
+    background: transparent;
+}
+@keyframes spin {
+    0% { 
+      transform: rotate(0deg); 
+      border-top: 1vw solid blue;
+    }
+    100% { 
+      transform: rotate(360deg);
+      border-top: 1vw solid  #3498db;
+     }
+}
+
+#auth{
+  margin-top: 10%;
+  width: 50%;
+  height: 25vw;
+  margin-left: 25%;
+  background: white;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+}
+.auth{
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  margin-left: 4%;
+}
+#authpass{
+  margin-top: 1%;
+  width: 80%;
+  margin-left: 10%;
+  height: 3vw;
+}
+#error_section{
+  margin-top: 5%;
+  margin-left: 5%;
+  color: red;
+}
+#authbtn{
+  margin-top: 10%;
+  width: 40%;
+  height: 4vw;
+  margin-left: 30%;
+  color: white;
+  background: blue;
+  border: none;
+  border-radius: 20%;
+  font-size: 120%;
+}
+#authbtn:hover{
+  background: red;
+  padding: 2%;
+}
+
+
     @media screen and (max-width: 786px){
       .normal li{
         font-size: 90%;
@@ -332,10 +620,19 @@ header {
       transform: scale(1.0);
     }
   }
-    /*login and registration forms*/
+
+
+
+
+
+
+    /*..............................................login and registration forms...................................................*/
+
+
  .reg{
       margin-top: 2%;
       margin-right: 2%;
+      
       display: flex;
       
     }
@@ -372,7 +669,7 @@ header {
     }
         @media screen and (max-width: 600px){
   #log-out{
- width: 9vw;
+ width: 7vw;
  transform: scale(1.0);
   }
 }
@@ -380,6 +677,8 @@ header {
   .reg{
     margin-top: 0%;
     font-size: 70%;
+    margin-right: 4%;
+    margin-left: -5vw;
   }
 }
 
@@ -415,13 +714,16 @@ header {
       font-size: 80%;
     }
 
-  /*section*/
+
+  /*..........................................................section...........................................................*/
+
   section{
   display: flex;
   width: 100%;
 }
 
-/* Privacy-policy......................*/
+/*......................................................... Privacy-policy.....................................................*/
+
 #Privacy-policy{
   display: none;
   margin-top: 2%;
@@ -444,6 +746,10 @@ header {
   margin-right: 5vw;
   margin-top: -1.5vw;
 }
+ 
+
+
+ /*..............................................................slider styles.....................................................*/
 
   .slider{
   width: 60vw;
@@ -452,9 +758,7 @@ header {
   overflow: hidden;
   margin-top: 2px;
   border: 1px solid black;
-  transition: transform 0.5s ease-in-out; /* Add smooth transition */
-   position: relative;*/
-   transform: scale(1.0);
+  transition: transform 0.5s ease-in-out;
 }
 
 .slides{
@@ -535,6 +839,8 @@ header {
   background: #80000;
 }
 
+/*...............................................................categories..................................................*/
+
 .subscribe{
   font-size: 80%;
 
@@ -576,15 +882,21 @@ display: none;
   }
 }
 
-.ul2{ 
-  margin-top: 20%;
-}
+
 .ul3 ul:hover {
   border: 2px solid black;
   }
 .ul3{
   background: #FEFCFF;
 }
+
+
+
+/*--...................................................movie genre on wide screen..................................*/
+.ul2{ 
+  margin-top: 20%;
+}
+
 .ul2 h3{
       font-size: 80%;
       color: black;
@@ -609,9 +921,14 @@ display: none;
 a{
   text-decoration: none;
 }
-/*search*/
 
-form{
+
+
+
+
+/*.......................................................search engine.........................................................*/
+
+ .search form{
   margin-top: 10%;
 padding-left: 0%;
 border-radius: 1% solid black;
@@ -624,23 +941,16 @@ display: flex;
 #searchInput::placeholder {
  font-size: 90%;
 }
-button{
-  background-color:  #FFA500;
-  border: 2px solid  #FFA500;
-  border-radius: 10%;
-  width: 15vw;
-}
 @media screen and (max-width: 600px){
-  button{
-  background-color:  #FFA500;
-  border: 1px solid  #FFA500;
+  .search button{
+  border: 1px solid ;
   border-radius: 2%;
   width: 15vw;
 }
 }
 @media screen and (max-width: 600px){
   .search{
-    margin-right: 10%;
+    margin-right: 8%;
   }
 }
 .search{
@@ -649,7 +959,7 @@ margin-top: 10%;
 text-align: center;
 }
 @media screen and (max-width: 600px){
-  search{
+  .search{
     margin-right: 5%;
   }
 }
@@ -687,7 +997,13 @@ text-align: center;
     width: 100%;
 
    }
-  /*movies*/
+
+
+
+
+
+  /*...............................................................movies section..................................................*/
+
   .movies{
   width: 100%;
   height: auto;
@@ -710,48 +1026,162 @@ text-align: center;
     margin-top: 2%;
     margin-left: 2%;
   }
-    #Content1{
+  #Content h3{
+    display: inline-block;
+    font-size: 100%;
+    position: relative;
     margin-top: 2%;
+    margin-bottom: 5%;
+  }
+@media screen and (max-width: 600px){
+  #Content h3{
+    font-size: 75%;
+  }
+}
+
+
+  /*............................................................comment section..........................................*/
+    #Content1{
+    margin-top: 5%;
     margin-left: 2%;
     display: none;
   }
-  .comment{
-    display: flex;
-    font-weight: bolder;
-    border-radius: 5vw solid;
-    width: 50vw;
-    height: 10vw;
+  .Content1{
+    height: auto;
+  margin-left: 1%;
+  margin-top: -2%;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 100%;
+}
+    .commentN{
+    background: white;
+    margin-top: 10%;
   }
-.commenting{
-  margin-top: 1%;
-  display: block;
-}
-.comments{
+
+  #Content1 form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  #Content1 textarea {
+    width: 70%;
+    height: 30%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: #FFF;
+    font-size: 16px;
+    border-radius: 6px;
+        }
+
+  #Content1 button{
+    width: 20%;
+    cursor: pointer;
+        }
+  .btn.btn1 {
+    display: inline-block;
+        }
+.wherecommentsgo{
+  width: 35%;
   margin-top: 2%;
-  display: flex;
-
-
+  min-height: 5vw;
+  background: #FBFBF9;
+  border-radius: 3px;
+  background: rgba(255, 255, 256, 1);
+  display: flexwrap;
+  
 }
-.comment-value{
-  background: white;
-  color: black;
-  font-size: 90%;
-  height: auto;
-  margin-top: 3vw;
+
+.wherecommentsgo p{
+  font-size: 80%;
+  max-width: 100%;
   margin-left: 2%;
-  width: 50vw;
+  position: relative;
+  height: 5%;
+  white-space: break-spaces;
+  word-wrap: break-word;
+  color: black;
+  opacity: 1;
+  top: 3px;
 }
-.head-icon {
-  width: 10vw;
-  height: 10vw;
-  border-radius: 50%;
-  background-color: #3498db;
-  color: #ffffff;
+.whererepliessgo{
+display: flexwrap;
+}
+.replyshell {
+  margin-left: 5%;
+  width: 30%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  min-height: 5vw;
+  background: #FBFBF9;
+  border-radius: 3px;
+  background: rgba(255, 255, 256, 1);
+ display: flexwrap;
+}
+.replyshell p {
+  position: relative;
+  font-size: 80%;
+  max-width: 100%;
+  margin-left: 2%;
+  height: 5%;
+  white-space: break-spaces;
+  word-wrap: break-word;
+  color: black;
+  opacity: 1;
+  top: 5px;
+}
+
+
+.replydisplay{
+  margin-left: 29%;
+  margin-top: 2vw;
+  background: #D1D0CE;
+  cursor: pointer;
+  color: black;
+  width: 5%;
+}
+.reply-section1{
+  margin-top: 2vw;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 90%;
+  flex-direction: column;
 }
+.reply-section{
+  margin-top: 2vw;
+  display: none;
+}
+
+ @media screen and (max-width: 600px){
+            #Content1 button{
+    width: 30%;
+    cursor: pointer;
+        font-size: 70%;
+        }
+        #Content1 textarea{
+          width: 60%;
+          font-size: 10px;
+          height: auto;
+        }
+        .replydisplay{
+        font-size: 80%;
+      }
+      .comment-display{
+        font-size: 80%;
+      }
+      #alert-box{
+        font-size: 80%;
+      }
+              #Content1 p{
+          font-size: 70%;
+          position: inherit;
+        }
+      }
+
+/*..........................................................download section.....................................................*/
+
+
 .class{
   display: flex;
   font-size: 90%;
@@ -778,6 +1208,7 @@ text-align: center;
   color: white;
   background:  #808080;
 }
+
 .download{
  display: flex;
  font-size: 90%;
@@ -793,6 +1224,12 @@ text-align: center;
   font-size: 80%;
   color: #0C090A;
 }
+
+
+
+
+/*...........................................................pagination section....................................................*/
+
 .pagination{
   height: auto;
   margin-left: 1%;
@@ -801,14 +1238,7 @@ text-align: center;
   flex-wrap: wrap;
   max-width: 100%;
 }
-.Content1{
-    height: auto;
-  margin-left: 1%;
-  margin-top: -2%;
-  display: flex;
-  flex-wrap: wrap;
-  max-width: 100%;
-}
+
 .pageNmbers {
       margin-top: 10%;
       margin-left: 60%;
@@ -881,7 +1311,7 @@ text-align: center;
   display: none;
   background: #FEFCFF;
   width: 50vw;
-  margin-top: -3%;
+  margin-top: 5%;
 }
 .bottom-center{
   display: none;
@@ -914,18 +1344,13 @@ text-align: center;
   font-size: 40%;
 }
 }
-@media screen and (max-width: 400px){
-  .list a{
-    font-size: 60%;
-  }
-}
-.list a{
-  margin-left: 2vw;
-  color: black;
-  display: block;
-  margin-top: 20%;
-  font-size: 70%;
-}
+
+
+
+/*--...................................................movie genre on small screen..................................*/
+
+
+
 .list{
   margin-left: 17%;
   padding-top: 5%;
@@ -945,6 +1370,7 @@ text-align: center;
   margin-right: 9%;
    
 }
+
 .ul4{
   display: none;
 }
@@ -995,6 +1421,13 @@ text-align: center;
   font-size: 70%;
 }
 }
+
+
+
+/*.......................................................latest post section.......................................................*/
+
+
+
 .bak{
   background: #FEFCFF;
 }
@@ -1010,6 +1443,8 @@ display: flex;
 color: black;
 font-size: 70%;
 margin-top: 5%;
+margin: 2%;
+padding: 2%;
 }
 @media screen and (max-width: 600px){
   .display2 h3{
@@ -1047,7 +1482,7 @@ transform: scale(1.0);
 }
 
 
-  /*footer*/
+  /*................................................................footer.........................................................*/
 footer{
   width: 100%;
   height: 32vw;
@@ -1055,6 +1490,7 @@ footer{
   color: white;
   margin-top: 20vw;
   background-image: url("photos/login image.jpg");
+  background-size: cover;
 }
 @media screen and (max-width: 600px){
   footer{
@@ -1068,6 +1504,7 @@ footer{
   width: 100%;
   height: 55vw;
   transform: scale(1.0);
+
 }
 }
 .footer{
@@ -1100,18 +1537,12 @@ footer .footer{
 }
 @media screen and (max-width: 600px){
 footer .cop{
-  margin-top: 5%;
+  margin-top: -1%;
   margin-left: 13%;
   font-size: 60%;
 }
 }
-@media screen and (max-width: 600px){
-footer .cop{
-  margin-top: 1%;
-  margin-left: 13%;
-  font-size: 60%;
-}
-}
+
 .cap{
   font-size: 80%;
   margin-top: -10%;
@@ -1145,6 +1576,8 @@ footer .cop{
 }
 </style>
 <body>
+  <!--....................................................logo section.........................................................-->
+
 	<div class="head">
 		<div class="logo">
 			<img src="photos/img 1.jpg">
@@ -1163,12 +1596,17 @@ footer .cop{
 		</div>
 	</div>
     <div class="user-place"id="user-place"></div>
+
+
+  <!--......................................................header section......................................................-->
+
 	<header>
 		<div class="ul1">
 			<div class="normal">
-			<li><a href="index.html">HOME</a></li>
-			<li><a href="index.html">MOVIES</a></li>
-			<!--<li><a href="#">SERIES</a></li>-->
+			<li><a href="#home" id="home">HOME</a></li>
+			<li><a href="#pagination" id="home">MOVIES</a></li>
+			<li><a href="#series" id="series">SERIES</a></li>
+      <li><a href="#" id="admin1">Adminstartion</a></li>
 			</div>
 
 			<div class="special">
@@ -1191,6 +1629,79 @@ footer .cop{
       <div id="log-out" type="button" onclick="deleteCookie(name)">Log out</div>
     </div>
 	</header>
+
+ <!--.................admin page.....-->
+ <div id="admin_page">
+  
+  <div id='auth'>
+    <div class="heading_id auth">Please write your password to open admin page</div>
+    <input type="Password" name="Password" placeholder="write your Password" id="authpass">
+    <div id="error_section"></div>
+    <button type="submit" id="authbtn">Submit</button>
+  </div>
+  <div id="admin">
+        <div class="admin_header">
+        <div class="cancel">
+            <div id="cancel">Cancel</div>
+        </div>
+        <div class="save">
+            <div id="save">Save</div>
+            
+        </div>
+    </div>
+    <div class="movie-cat" id="movie-cat">
+       <div class="cover_page" id="cover_page">
+        <img src="photos\upload.png" id="cover" alt="Upload">
+        <input type="file" id="fileInput" accept="image/jpeg, image/png" required="">
+        </div>
+            <div class="cat">
+              <div class="heading_id">Title</div>
+                    <input type="text" id="title" name="title" placeholder="write your movie title here" required="">
+              <div class="heading_id">Date Realsed</div>
+                    <input type="date" id="date" name="date" placeholder="write the date when the movie was played" required="">
+                        <div class="heading_id">Quality</div>
+                    <div class="quality-input" id="quality-input">
+                      <span id="quality"></span>
+                      <span class="icon" id="quality-downdrop">&#10094;</span>
+                      <div class="movie-quality" id="movie-quality">
+                            <div class="sub-sp">
+                            <p class="qal">1080P</p>
+                            <p class="qal">720P</p>
+                            <p class="qal">480P</p>
+                            <p class="qal">360P</p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <p class="heading_id">Genre</p>
+                    <div class="Genre_tab" id="Genre_tab">
+                      <span id="movie_gen"></span>
+                        <span class="icon" id="genre_downdrop">&#10094;</span>
+                      
+                        <div class="movie-genre" id="movie-genre">
+                            <div class="sub-sp">
+                            <p class="cls">Action</p>
+                            <p class="cls">Sci-fi</p>
+                            <p class="cls">Thriller</p>
+                            <p class="cls">Horror</p>
+                            <p class="cls">Drama</p>
+                            <p class="cls">Adventure</p>
+                            <p class="cls">Comedy</p>
+                            <p class="cls">Fantasy</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="heading_id">Movie Upload section</div>
+                    <img src="photos/add.png" id="add_movie" alt="Upload">
+                    <div id="loader"><p id="loading"></p></div>
+                    <input type="file" id="movieInput" accept="video/mp4,video/mpg" required="" required="">
+                 </div>
+               </div>
+              </div>
+            </div>
+
+  <!--.................................................. Privacy-policy.....................................................-->
+
   <div id="about-us"></div>
   <div id="Privacy-policy">
     <p class="bolder1">Privacy Policy for Dj Action Movies</p>
@@ -1259,6 +1770,10 @@ footer .cop{
 
 <p class="first">If you have any questions or concerns about this Privacy Policy or your personal information, please contact us at </p><br><p class="bolder1"><a href="tel+254757305550" class="blod">+254757305550</a></p>
   </div>
+
+
+  <!--......................................................slider section......................................................-->
+
 <section id="1">
 
 <div class="slider">
@@ -1305,19 +1820,30 @@ footer .cop{
 
 </div>
 </div>
-	<div class="categories">
+
+<!--................................................................categories..................................................-->
+	
+  <div class="categories">
     <div class="subscribe">
     <form id="subscribeForm" onsubmit="subscribe(event)">
       <button type="submit" class="subbtn">Subscribe</button>
     </form>
 <div class="subcribers"id="subscribers"><h4></h4></div>
 </div>
+
+
+ <!--..............................................................search engine..................................................-->
+
 		<div class="search">
 				<form id="form" role="search">
 				<input type="search" name="q" id="searchInput" placeholder="Search for movies" aria-label="Search through site content" class="search1">
 				<button type="button" onclick="searchMovies()" class="subbtn"><span class=fontsize>SEARCH</span></button>
 			</form>
 </div>
+
+
+<!--...................................................movie genre on wide screen..................................-->
+
 <div class="ul2" id="ul2">
 	<h3>CATEGORIES </h3>
 	
@@ -1339,22 +1865,37 @@ footer .cop{
 </div>
 </section>
 
+<!--..............................................................movies section................................................-->
+
 <div class="movies" id="2">
 <div class="movie1">
 	<p class="home">Latest dj Action movies</p>
     <div id="Content" class="movie-details"></div>
+
+
+<!--.........................................................comment section...............................................-->
+
+
     <div id="Content1" class="comment-section">
         <span class="commentN">Leave us a comment</span>
-        <textarea id="commentInput"></textarea>
-        <button onclick="submitComment()">Comment</button>
+              <form>
+          <textarea name="Message" rows="6" placeholder="Your Comment" id="commentInput" required></textarea>
+          <div id="alert-box"></div>
+          <button type="button" class="btn btn1" onclick="submitcomment(event)">Comment</button>
+        </form>
         <div id="commentContainer"></div>
     </div>
+
+<!--.........................................................pagination section...............................................-->
 	<div id="pagination"class="pagination">
 
  
   </div>
 <div id="pageNumbers" class="pageNmbers"></div>
 </div>
+
+<!--...................................................movie genre on small screen..................................-->
+
 	<div class="list" >
         <div class="ul4">
           <div class="cat">Categories</div>
@@ -1371,6 +1912,9 @@ footer .cop{
     <ul>
   <div  class="type">Drama</div></ul>
 </div>
+
+
+<!--...................................................latest posts section..................................-->
     <h3>Latest<br/>Posts</h3>
     <div class="bak" id="bak">
 
@@ -1378,7 +1922,11 @@ footer .cop{
         <img src="photos/images_4.png" style=" margin-bottom: -20vw; margin-left: -5vw; width: 15vw; height: 15vw;"></a>
 	</div>
 </div>
-<footer>
+
+
+<!--.............................................footer.........................-->
+
+<footer id="footer">
 	<div class="footer">
 	<div id="about"> About Us</div>
 	<div id="policy">Privacy Policy</div>
